@@ -1,0 +1,13 @@
+-----Commuication------
+The above given script communicates from node to python
+When you run main.js it converts test image(Capture.PNG) to base64
+and automatically calls python script which reconverts encoded string to image.
+
+To work with script you have to keep main.js and python in same folder
+Because main.js writes base64 string in a .txt file and calls python script 
+Python script then reads that .txt file to receive that base64 string and convert into image.
+
+
+-----UPDATE-----
+Soon a script will be uploaded that will no longer have the limitation of placing
+main.js and python script in tha same folder.
