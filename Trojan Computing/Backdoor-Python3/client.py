@@ -9,7 +9,10 @@ import subprocess
 hostAddr = '192.168.43.44'
 port = 5000
 
+#create socket 
 s = socket.socket()
+
+#connect socket to server
 s.connect((hostAddr,port))
 
 def browse_file():
