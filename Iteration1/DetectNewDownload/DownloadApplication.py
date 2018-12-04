@@ -1,11 +1,15 @@
 import os, time
 import Tkinter as tk
 import tkMessageBox
+import getpass
 
-path_to_watch = "C://Users//hassa/Downloads"
+path_to_watch = "C://Users//"
 
 root = tk.Tk()
 root.withdraw()
+username = getpass.getuser()
+
+path_to_watch = path_to_watch + "//" + username + "//Downloads"
 
 before = []  	#Initial representation of directory
 after = []		#

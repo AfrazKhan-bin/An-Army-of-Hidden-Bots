@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['DownloadApplication.py'],
-             pathex=['C:\\Users\\hassa\\Desktop\\Ietration1\\DownloadDocument\\EXE File'],
+             pathex=['C:\\Users\\hassa\\OneDrive\\Documents\\An-Army-of-Hidden-Bots\\Iteration1\\DetectNewDownload'],
              binaries=[],
              datas=[],
              hiddenimports=[],

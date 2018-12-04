@@ -1,4 +1,4 @@
-('C:\\Users\\hassa\\Desktop\\Ietration1\\DownloadDocument\\EXE File\\build\\DownloadApplication\\PYZ-00.pyz',
+('C:\\Users\\hassa\\OneDrive\\Documents\\An-Army-of-Hidden-Bots\\Iteration1\\DetectNewDownload\\build\\DownloadApplication\\PYZ-00.pyz',
  [('encodings.aliases',
    'c:\\users\\hassa\\anaconda2\\lib\\encodings\\aliases.py',
    'PYMODULE'),
@@ -391,6 +391,7 @@
    'c:\\users\\hassa\\anaconda2\\lib\\encodings\\cp932.py',
    'PYMODULE'),
   ('codecs', 'c:\\users\\hassa\\anaconda2\\lib\\codecs.py', 'PYMODULE'),
+  ('getpass', 'c:\\users\\hassa\\anaconda2\\lib\\getpass.py', 'PYMODULE'),
   ('tkMessageBox',
    'c:\\users\\hassa\\anaconda2\\lib\\lib-tk\\tkMessageBox.py',
    'PYMODULE'),
