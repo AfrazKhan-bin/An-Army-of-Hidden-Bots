@@ -82,7 +82,7 @@ def main_menu():
     # while True:
     strChoice = "--i"
     strChoice = str(strChoice)
-    refresh_connections()  # refresh connection list
+    # refresh_connections()  # refresh connection list
 
     if strChoice == "--l":
         list_connections()

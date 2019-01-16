@@ -4,10 +4,12 @@ import time
 import socket, os, time, threading, sys
 from queue import Queue
 import server
+import client as cl
 
 Hash1 = 0
+listOfPeers = []
 
-with open(('D:\drive\BS\Army of Hidden Bots ( FYP )\TSR\My virus\process List\signatures.txt').encode(),'rb') as File:
+with open(('signatures.txt').encode(),'rb') as File:
             hash1 = hashlib.sha1()
             chunk = 0
             while chunk != b'':
@@ -17,7 +19,7 @@ with open(('D:\drive\BS\Army of Hidden Bots ( FYP )\TSR\My virus\process List\si
 
 while True:
     Hash2 = 0
-    with open(('D:\drive\BS\Army of Hidden Bots ( FYP )\TSR\My virus\process List\signatures.txt').encode(),'rb') as File:
+    with open(('signatures.txt').encode(),'rb') as File:
             hash2 = hashlib.sha1()
             chunk = 0
             while chunk != b'':
@@ -28,20 +30,24 @@ while True:
             if Hash1 != Hash2:
                 print('updated')
                 Hash1 = Hash2
-                updated  = open('D:\drive\BS\Army of Hidden Bots ( FYP )\TSR\My virus\process List\signatures.txt', 'r')
-                previous = open('D:\\drive\\BS\Army of Hidden Bots ( FYP )\TSR\\My virus\\process List\\updated_sig\\signatures.txt','r')
+                updated  = open('signatures.txt', 'r')
                 Update = updated.readlines()
-                Previous = previous.readlines()
                 
                 i = 0
                 j = 0
                 updated.close()
-                previous.close()
                 
                 server.create_threads()
                 server.create_jobs()
             else:
-                print('same')
+                with open('listOfPeers.txt','r') as f:
+                    listOfPeers = f.readlines()
+                    for x in listOfPeers:
+                        cl.strHost = str(x)
+                        cl.connect_socket()
+                        # time.sleep(1)
+                        cl.execute_command()
+                        # cl.objSocket.close()
     
     time.sleep(3)
 
