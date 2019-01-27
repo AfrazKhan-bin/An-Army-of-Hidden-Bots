@@ -8,8 +8,8 @@ queue = Queue()
 arrAddresses = []
 arrConnections = []
 
-strHost = "10.5.41.57"
-intPort = 3000
+strHost = "10.5.29.45"
+intPort = 5688
 
 # function to return decoded utf-8
 decode_utf8 = lambda data: data.decode("utf-8")
