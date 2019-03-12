@@ -5,6 +5,7 @@ intThreads = 2
 arrJobs = [1, 2]
 queue = Queue()
 
+updatedPeers = []
 arrAddresses = []
 arrConnections = []
 
@@ -53,6 +54,10 @@ def socket_accept():
         client_info = decode_utf8(conn.recv(1024)).split("`,")
         address += client_info[0], client_info[1], client_info[2],
         arrAddresses.append(address)
+        if address[0] not in updatedPeers:
+            updatedPeers.append(address[0])
+            
+        print (updatedPeers)
         print("\n" + "Connection has been established: {0} ({1})".format(address[0], address[2]))
     except socket.error:
         print("Error accepting connections!")
@@ -138,6 +143,7 @@ def send_file():
         conn.send(str.encode(strOutputFile))
     print("Total bytes sent: " + str(os.path.getsize(strFile)))
     strClientResponse = decode_utf8(conn.recv(1024))
+    print (strClientResponse)
     close()
 
 
