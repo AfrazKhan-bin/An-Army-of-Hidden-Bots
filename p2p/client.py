@@ -87,15 +87,14 @@ def upload(data):
         objSocket.send(str.encode("Path is protected/invalid!"))
 
     result = compareFiles()
-    if(result == True):
-        print (objSocket)
-        objSocket.close()
-        print (objSocket)
-        time.sleep(5)
-    else:
+    if(result == False):
         transferFiles()
         saveTransaction()
     
+    print (objSocket)
+    objSocket.close()
+    print (objSocket)
+    time.sleep(5)
     # sys.exit(0)
 
 def saveTransaction():
