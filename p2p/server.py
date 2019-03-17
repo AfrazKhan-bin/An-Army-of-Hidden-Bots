@@ -1,5 +1,6 @@
 import socket, os, time, threading, sys
 from queue import Queue
+import datetime
 
 intThreads = 2
 arrJobs = [1, 2]
@@ -56,11 +57,20 @@ def socket_accept():
         arrAddresses.append(address)
         if address[0] not in updatedPeers:
             updatedPeers.append(address[0])
+            saveTransaction(address[0])
             
         print (updatedPeers)
         print("\n" + "Connection has been established: {0} ({1})".format(address[0], address[2]))
     except socket.error:
         print("Error accepting connections!")
+
+
+def saveTransaction(address):
+    currentDT = datetime.datetime.now()
+    currentDT = str(currentDT)
+    with open("Transactions.txt",'a+') as f:
+        f.write("File sent to " + address + " at " + currentDT + "\n")
+        f.close()
 
 def main_menu():
     print ("In main menu")
