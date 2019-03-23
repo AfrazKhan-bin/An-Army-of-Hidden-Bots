@@ -29,6 +29,7 @@ class Ui_Dialog(object):
         Dialog.setObjectName(_fromUtf8("Dialog"))
         Dialog.resize(607, 350)
         self.listOfNodes = QtGui.QTextEdit()
+        self.lisOfTransactions = QtGui.QTextEdit()
         self.frame = QtGui.QFrame(Dialog)
         self.frame.setGeometry(QtCore.QRect(-1, -1, 611, 351))
         self.frame.setStyleSheet(_fromUtf8("background-color:#68b740;\n"
@@ -69,6 +70,8 @@ class Ui_Dialog(object):
         self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 179, 219))
         self.scrollAreaWidgetContents.setObjectName(_fromUtf8("scrollAreaWidgetContents"))
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
+        self.getListOfTransactions()
+        self.scrollArea.setWidget(self.lisOfTransactions)
         self.status = QtGui.QFrame(self.frame)
         self.status.setGeometry(QtCore.QRect(10, 310, 391, 31))
         self.status.setStyleSheet(_fromUtf8("background-color:#e6f28e;\n"
@@ -163,12 +166,22 @@ class Ui_Dialog(object):
     def getListOfNodes(self):
         with open("peers.txt",'r') as f:
             listOfIPs = f.readlines()
-            print (listOfIPs)
+            # print (listOfIPs)
             f.close()
           
         # self.listOfNodes.setPlainText(listOfIPs)  
         for each in listOfIPs:
             self.listOfNodes.setPlainText(self.listOfNodes.toPlainText() + each)
+
+    def getListOfTransactions(self):
+    	with open("Transactions.txt") as f:
+    		allTransactions = f.readlines()
+    		print (allTransactions)
+    		f.close()
+
+    	for each in allTransactions:
+        	self.lisOfTransactions.setPlainText(self.lisOfTransactions.toPlainText() + each)
+
        
 if __name__ == "__main__":
     import sys
