@@ -8,6 +8,7 @@ import datetime
 strHost = "10.5.29.45"
 # strHost = socket.gethostbyname("")
 intPort = 5688
+fileChanged = 0
 
 strPath = os.path.realpath(sys.argv[0])  # get file path
 TMP = os.environ["TEMP"]  # get temp path
@@ -90,6 +91,7 @@ def upload(data):
     if(result == False):
         transferFiles()
         saveTransaction()
+        fileChanged = 1
     
     print (objSocket)
     objSocket.close()

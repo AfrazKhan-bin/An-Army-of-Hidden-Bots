@@ -14,28 +14,30 @@ listOfPeers = []
 
 with open('peers.txt','r') as f:
         listOfPeers = f.readlines()
+        if (len(listOfPeers) == 0):
+            sys.exit(0)
         for index,each in enumerate(listOfPeers):
             listOfPeers[index] = each.splitlines()[0]
 
-with open(('signatures.txt').encode(),'rb') as File:
-            hash1 = hashlib.sha1()
-            chunk = 0
-            while chunk != b'':
-                chunk = File.read(1024)
-                hash1.update(chunk)
-                Hash1 = hash1.hexdigest()
+
+def computeHash():
+    with open(('signatures.txt').encode(),'rb') as File:
+        hash1 = hashlib.sha1()
+        chunk = 0
+        while chunk != b'':
+            chunk = File.read(1024)
+            hash1.update(chunk)
+            Hashed = hash1.hexdigest()
+        File.close()
+    return Hashed
+
+Hash1 = computeHash()
 
 def compare(list1,list2):
     return Counter(list1) == Counter(list2)
 
 while True:
-    with open(('signatures.txt').encode(),'rb') as File:
-            hash2 = hashlib.sha1()
-            chunk2 = 0
-            while chunk2 != b'':
-                chunk2 = File.read(1024)
-                hash2.update(chunk2)
-                Hash2 = hash2.hexdigest()
+            Hash2 = computeHash()
             
             print("Matching Files")
             if Hash1 != Hash2:
@@ -49,7 +51,7 @@ while True:
                 j = 0
                 updated.close()
                 
-                print (listOfPeers)
+                # print (listOfPeers)
                 while (not (compare(listOfPeers,server.updatedPeers))):
                     server.create_socket()
                     server.socket_bind()
@@ -70,17 +72,10 @@ while True:
                     cl.strHost = str(x)
                     cl.create_socket()
                     print ("Back here")
-                    # print(cl.objSocket())
-                    # cl.execute_command()
-                    with open(('signatures.txt').encode(),'rb') as File:
-                        hash3 = hashlib.sha1()
-                        chunk3 = 0
-                        while chunk3 != b'':
-                            chunk3 = File.read(1024)
-                            hash3.update(chunk3)
-                            Hash3 = hash3.hexdigest()
-                            Hash1 = Hash3   
+
+                    if (cl.fileChanged == 1)
+                        Hash1 = computeHash()
+                        cl.fileChanged = 0
 
             time.sleep(3)             
-
 
