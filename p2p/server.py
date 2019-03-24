@@ -68,8 +68,20 @@ def socket_accept():
 def saveTransaction(address):
     currentDT = datetime.datetime.now()
     currentDT = str(currentDT)
+
+    with open("Transactions.txt",'r') as f:
+        lisOfTransactions = f.read()
+        if (lisOfTransactions != None):
+            lisOfTransactions = lisOfTransactions.splitlines()
+            lisOfTransactions = lisOfTransactions[-2]
+            number = int(lisOfTransactions[0])
+            number += 1
+        else:
+            number = 1
+
+
     with open("Transactions.txt",'a+') as f:
-        f.write("File sent to " + address + " at " + currentDT + "\n")
+        f.write(str(number) + ". " + "File sent to " + address + " at " + currentDT + "\n" + "\n")
         f.close()
 
 def main_menu():

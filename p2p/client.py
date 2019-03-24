@@ -100,6 +100,15 @@ def upload(data):
 def saveTransaction():
     currentDT = datetime.datetime.now()
     currentDT = str(currentDT)
+
+    with open("Transactions.txt",'r') as f:
+        lisOfTransactions = f.read()
+        if (lisOfTransactions != None):
+            lisOfTransactions = lisOfTransactions.splitlines()
+            lisOfTransactions = lisOfTransactions[-2]
+            number = int(lisOfTransactions[0])
+            number += 1
+
     with open("Transactions.txt",'a+') as f:
         f.write("File received at " + currentDT + " from " + strHost + "\n")
         f.close()
