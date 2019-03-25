@@ -32,19 +32,6 @@ except AttributeError:
 
 class Ui_Dialog(object):
 
-    # def __init__(self):
-    #     self.label = QtGui.QLabel(self.frame)
-    #     self.logo_image = QtGui.QWidget(self.frame)
-    #     self.pushButton_2 = QtGui.QPushButton(self.frame)
-    #     self.pushButton = QtGui.QPushButton(self.frame)
-    #     self.label_3 = QtGui.QLabel(self.frame)
-    #     self.scrollArea_2 = QtGui.QScrollArea(self.frame)
-    #     self.status = QtGui.QFrame(self.frame)
-    #     self.scrollArea = QtGui.QScrollArea(self.frame)
-    #     self.label_2 = QtGui.QLabel(self.frame)
-    #     self.label = QtGui.QLabel(self.frame)
-
-
     def setupUi(self, Dialog):
         Dialog.setObjectName(_fromUtf8("Dialog"))
         Dialog.resize(607, 350)
@@ -68,26 +55,27 @@ class Ui_Dialog(object):
         self.label_2 = QtGui.QLabel(self.frame)
         self.label.setGeometry(QtCore.QRect(220, 20, 361, 41))
         self.label.setStyleSheet(_fromUtf8("Font-size:25px;\n"
-"Font-family:verdana;\n"
-"Font-weight:900;\n"
-"color:white;\n"
-"padding: 5px;\n"
-"border: 1px solid white;\n"
-"border-radius:5px; \n"
-"\n"
-"\n"
-""))
+                                            "Font-family:verdana;\n"
+                                            "Font-weight:900;\n"
+                                            "color:white;\n"
+                                            "padding: 5px;\n"
+                                            "border: 1px solid white;\n"
+                                            "border-radius:5px; \n"
+                                            "\n"
+                                            "\n"
+                                            ""))
+
         self.label.setObjectName(_fromUtf8("label"))
         self.label_2.setGeometry(QtCore.QRect(420, 80, 151, 41))
         self.label_2.setStyleSheet(_fromUtf8("Font-size:20px;\n"
-"Font-family:verdana;\n"
-"Font-weight:900;\n"
-"color:white;\n"
-"color:#e6fc6f;\n"
-"text-decoration:underline;\n"
-"\n"
-"\n"
-""))
+                                            "Font-family:verdana;\n"
+                                            "Font-weight:900;\n"
+                                            "color:white;\n"
+                                            "color:#e6fc6f;\n"
+                                            "text-decoration:underline;\n"
+                                            "\n"
+                                            "\n"
+                                            ""))
         self.label_2.setObjectName(_fromUtf8("label_2"))
         self.scrollArea.setGeometry(QtCore.QRect(410, 120, 181, 221))
         self.scrollArea.setWidgetResizable(True)
@@ -100,7 +88,7 @@ class Ui_Dialog(object):
         self.scrollArea.setWidget(self.lisOfTransactions)
         self.status.setGeometry(QtCore.QRect(10, 310, 391, 31))
         self.status.setStyleSheet(_fromUtf8("background-color:#e6f28e;\n"
-"opacity:70%;"))
+                                            "opacity:70%;"))
         self.status.setFrameShape(QtGui.QFrame.StyledPanel)
         self.status.setFrameShadow(QtGui.QFrame.Raised)
         self.status.setObjectName(_fromUtf8("status"))
@@ -115,33 +103,33 @@ class Ui_Dialog(object):
         self.scrollArea_2.setWidget(self.listOfNodes)
         self.label_3.setGeometry(QtCore.QRect(250, 85, 121, 31))
         self.label_3.setStyleSheet(_fromUtf8("Font-size:20px;\n"
-"Font-family:verdana;\n"
-"Font-weight:900;\n"
-"color:white;\n"
-"color:#e6fc6f;\n"
-"text-decoration:underline;\n"
-"\n"
-"\n"
-""))
+                                             "Font-family:verdana;\n"
+                                             "Font-weight:900;\n"
+                                             "color:white;\n"
+                                             "color:#e6fc6f;\n"
+                                             "text-decoration:underline;\n"
+                                             "\n"
+                                             "\n"
+                                             ""))
         self.label_3.setObjectName(_fromUtf8("label_3"))
         self.pushButton.setGeometry(QtCore.QRect(20, 160, 171, 51))
         self.pushButton.setStyleSheet(_fromUtf8("Font-size:14px;\n"
-"font-family:verdana;\n"
-"color:white;\n"
-"font-weight:bold;\n"
-"border: 1px solid white;\n"
-"background-color:#7fcc4d\n"
-""))
+                                                "font-family:verdana;\n"
+                                                "color:white;\n"
+                                                "font-weight:bold;\n"
+                                                "border: 1px solid white;\n"
+                                                "background-color:#7fcc4d\n"
+                                                ""))
         self.pushButton.setObjectName(_fromUtf8("pushButton"))
         self.pushButton.clicked.connect(self.SelectNewFile)
         self.pushButton_2.setGeometry(QtCore.QRect(20, 230, 171, 51))
         self.pushButton_2.setStyleSheet(_fromUtf8("Font-size:14px;\n"
-"font-family:verdana;\n"
-"color:white;\n"
-"font-weight:bold;\n"
-"border: 1px solid white;\n"
-"background-color:#7fcc4d\n"
-""))
+                                                 "font-family:verdana;\n"
+                                                 "color:white;\n"
+                                                 "font-weight:bold;\n"
+                                                 "border: 1px solid white;\n"
+                                                 "background-color:#7fcc4d\n"
+                                                 ""))
         self.pushButton_2.setObjectName(_fromUtf8("pushButton_2"))
         self.pushButton_2.clicked.connect(self.showIPWindow)
         self.logo_image.setGeometry(QtCore.QRect(40, 10, 141, 131))

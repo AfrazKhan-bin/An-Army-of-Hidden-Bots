@@ -3,6 +3,8 @@ import win32api, winerror, win32event, win32crypt
 from shutil import copyfile
 from winreg import *
 import datetime
+import wmi
+import os
 
 
 strHost = "10.5.29.45"
@@ -106,10 +108,15 @@ def saveTransaction():
 
     with open("Transactions.txt",'r') as f:
         lisOfTransactions = f.read()
-        if (lisOfTransactions != None):
+        if (len(lisOfTransactions) != 0 ):
             lisOfTransactions = lisOfTransactions.splitlines()
             lisOfTransactions = lisOfTransactions[-2]
-            number = int(lisOfTransactions[0])
+            digit1 = int(lisOfTransactions[0])
+            digit2 = lisOfTransactions[1]
+            if (digit2 != '.'):
+                number = int(str(digit1) + str(digit2))
+            else:
+                number = digit1
             number += 1
         else:
             number = 1
@@ -120,9 +127,15 @@ def saveTransaction():
         f.close()
 
     c = wmi.WMI()
+    i = 0
     for process in c.Win32_Process ():
-        if (process.Name == UI.exe):
-            process.terminate()
+        if (process.Name == 'UI.exe'):
+            print('its found')
+            result = process.Terminate()
+            if(i == 0):
+
+                os.system('start UI.exe')
+                i+=1
 
 
 def transferFiles():
