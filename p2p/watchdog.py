@@ -73,7 +73,8 @@ while True:
                     cl.create_socket()
                     print ("Back here")
 
-                    if (cl.fileChanged == 1)
+                    if (cl.fileChanged == 1):
+                        print ("InHere")
                         Hash1 = computeHash()
                         cl.fileChanged = 0
 

@@ -89,6 +89,7 @@ def upload(data):
 
     result = compareFiles()
     if(result == False):
+        global fileChanged
         transferFiles()
         saveTransaction()
         fileChanged = 1
@@ -99,7 +100,7 @@ def upload(data):
     time.sleep(5)
     # sys.exit(0)
 
-def saveTransaction():
+def saveTransaction(address):
     currentDT = datetime.datetime.now()
     currentDT = str(currentDT)
 
@@ -110,9 +111,12 @@ def saveTransaction():
             lisOfTransactions = lisOfTransactions[-2]
             number = int(lisOfTransactions[0])
             number += 1
+        else:
+            number = 1
+
 
     with open("Transactions.txt",'a+') as f:
-        f.write("File received at " + currentDT + " from " + strHost + "\n")
+        f.write(str(number) + ". " + "File received from " + strHost + " at " + currentDT + "\n" + "\n")
         f.close()
 
 
