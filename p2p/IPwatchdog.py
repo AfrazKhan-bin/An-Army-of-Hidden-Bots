@@ -6,6 +6,7 @@ from queue import Queue
 import IPserver
 import IPclient as cl
 from collections import Counter
+import wmi
 
 Hash1 = 0
 Hash3 = 0

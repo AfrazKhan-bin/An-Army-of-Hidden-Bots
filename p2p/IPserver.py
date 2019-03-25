@@ -1,6 +1,6 @@
 import socket, os, time, threading, sys
 from queue import Queue
-import mwi
+import wmi
 import os
 
 intThreads = 2
