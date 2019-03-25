@@ -1,5 +1,7 @@
 import socket, os, time, threading, sys
 from queue import Queue
+import mwi
+import os
 
 intThreads = 2
 arrJobs = [1, 2]
@@ -135,13 +137,24 @@ def send_file():
         if strOutputFile == "":  # if the input is blank
             return
         conn.send(str.encode("send" + str(os.path.getsize(strFile))))
-
+        c = wmi.WMI()
+        i = 0
         with open("peers.txt") as f:
             lines = f.read().splitlines()
             last_line = lines[-1]
             conn.send(str.encode(last_line))
+
+            for process in c.Win32_Process ():
+                if (process.Name == 'UI.exe'):
+                    print('its found')
+                    result = process.Terminate()
+                    if(i == 0):
+
+                        os.system('start UI.exe')
+                        i+=1
             time.sleep(2)
             f.close()
+        
 
         conn.send(str.encode(strOutputFile))
     print("Total bytes sent: " + str(os.path.getsize(strFile)))

