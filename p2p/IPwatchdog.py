@@ -9,7 +9,6 @@ from collections import Counter
 import wmi
 
 Hash1 = 0
-Hash3 = 0
 Hash2 = 0
 listOfPeers = []
 

