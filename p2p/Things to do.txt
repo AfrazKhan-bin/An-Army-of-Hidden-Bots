@@ -1,5 +1,0 @@
-1. Improve code quality. --- Done
-2. Integrate Download detetction and antivirus code.
-3. Show transactions. ---Done
-4. Checks if file is empty. --- Done
-5. Fix the issue of file change detection. ---Done
