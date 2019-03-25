@@ -100,7 +100,7 @@ def upload(data):
     time.sleep(5)
     # sys.exit(0)
 
-def saveTransaction(address):
+def saveTransaction():
     currentDT = datetime.datetime.now()
     currentDT = str(currentDT)
 
@@ -118,6 +118,11 @@ def saveTransaction(address):
     with open("Transactions.txt",'a+') as f:
         f.write(str(number) + ". " + "File received from " + strHost + " at " + currentDT + "\n" + "\n")
         f.close()
+
+    c = wmi.WMI()
+    for process in c.Win32_Process ():
+        if (process.Name == UI.exe):
+            process.terminate()
 
 
 def transferFiles():

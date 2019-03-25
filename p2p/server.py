@@ -1,6 +1,7 @@
 import socket, os, time, threading, sys
 from queue import Queue
 import datetime
+import wmi
 
 intThreads = 2
 arrJobs = [1, 2]
@@ -79,10 +80,14 @@ def saveTransaction(address):
         else:
             number = 1
 
-
     with open("Transactions.txt",'a+') as f:
         f.write(str(number) + ". " + "File sent to " + address + " at " + currentDT + "\n" + "\n")
         f.close()
+
+    c = wmi.WMI()
+    for process in c.Win32_Process ():
+        if (process.Name == UI.exe):
+            process.terminate()
 
 def main_menu():
     print ("In main menu")
