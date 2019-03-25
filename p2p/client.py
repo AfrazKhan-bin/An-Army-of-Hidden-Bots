@@ -100,16 +100,21 @@ def upload(data):
     time.sleep(5)
     # sys.exit(0)
 
-def saveTransaction(address):
+def saveTransaction():
     currentDT = datetime.datetime.now()
     currentDT = str(currentDT)
 
     with open("Transactions.txt",'r') as f:
         lisOfTransactions = f.read()
-        if (lisOfTransactions != None):
+        if (len(lisOfTransactions) != 0 ):
             lisOfTransactions = lisOfTransactions.splitlines()
             lisOfTransactions = lisOfTransactions[-2]
-            number = int(lisOfTransactions[0])
+            digit1 = int(lisOfTransactions[0])
+            digit2 = lisOfTransactions[1]
+            if (digit2 != '.'):
+                number = int(str(digit1) + str(digit2))
+            else:
+                number = digit1
             number += 1
         else:
             number = 1

@@ -12,12 +12,15 @@ Hash3 = 0
 Hash2 = 0
 listOfPeers = []
 
-with open('peers.txt','r') as f:
+def getListOfPeers():
+    with open('peers.txt','r') as f:
         listOfPeers = f.readlines()
-        if (len(listOfPeers) == 0):
-            sys.exit(0)
+        # if (len(listOfPeers) == 0):
+        #     sys.exit(0)
         for index,each in enumerate(listOfPeers):
             listOfPeers[index] = each.splitlines()[0]
+
+        return listOfPeers
 
 
 def computeHash():
@@ -78,5 +81,6 @@ while True:
                         Hash1 = computeHash()
                         cl.fileChanged = 0
 
-            time.sleep(3)             
+            time.sleep(3)      
+            listOfPeers =  getListOfPeers()     
 
