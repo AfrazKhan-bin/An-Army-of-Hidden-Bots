@@ -28,10 +28,10 @@ class Ui_IP(object):
         Dialog.setObjectName(_fromUtf8("Dialog"))
         Dialog.resize(366, 176)
         Dialog.setStyleSheet(_fromUtf8("background-color:#68b740;\n"
-"font:13px;\n"
-"\n"
-"\n"
-""))
+                                        "font:13px;\n"
+                                        "\n"
+                                        "\n"
+                                        ""))
         self.textEdit = QtGui.QTextEdit(Dialog)
         self.textEdit.setGeometry(QtCore.QRect(110, 60, 131, 31))
         self.textEdit.setStyleSheet(_fromUtf8("background-color:rgb(255, 255, 255);"))
@@ -39,12 +39,11 @@ class Ui_IP(object):
         self.label = QtGui.QLabel(Dialog)
         self.label.setGeometry(QtCore.QRect(70, 60, 31, 21))
         self.label.setStyleSheet(_fromUtf8("font:20px;\n"
-"font-weight: bold;"))
+                                            "font-weight: bold;"))
         self.label.setObjectName(_fromUtf8("label"))
         self.AddButton = QtGui.QPushButton(Dialog)
         self.AddButton.setGeometry(QtCore.QRect(230, 120, 75, 23))
-        self.AddButton.setStyleSheet(_fromUtf8("background-color: rgb(255, 255, 255);\n"
-""))
+        self.AddButton.setStyleSheet(_fromUtf8("background-color: rgb(255, 255, 255);\n"""))
         self.AddButton.setObjectName(_fromUtf8("AddButton"))
         self.AddButton.clicked.connect(self.getText)
 
@@ -56,6 +55,7 @@ class Ui_IP(object):
         self.label.setText(_translate("Dialog", "IP:", None))
         self.AddButton.setText(_translate("Dialog", "Add IP", None))
 
+    #Get the IP entered in the list and validate it.
     def getText(self):
         IP = self.textEdit.toPlainText()
         result = self.checkIP(IP)
@@ -64,8 +64,10 @@ class Ui_IP(object):
                 f.write("\n" + IP)
                 f.close()
         else:
-            print ("Error")
+            # print ("Error")
 
+
+    #Function to validate the IP.
     def checkIP(self,IP):
         values = IP.split('.')
         if (len(values) == 4):
@@ -81,6 +83,7 @@ class Ui_IP(object):
             return False
 
 
+    #Show the success or failure prompt.
     def showPropmpt(self,type):
         message = QtGui.QMessageBox()
         if(type == "Valid"):

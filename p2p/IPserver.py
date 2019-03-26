@@ -24,6 +24,7 @@ remove_quotes = lambda string: string.replace("\"", "")
 center = lambda string, title: f"{{:^{len(string)}}}".format(title)
 
 
+#Create a socket on the given port.
 def create_socket():
     global objSocket
     # arrAddresses = []
@@ -35,18 +36,19 @@ def create_socket():
         print("Error creating socket " + str(strError))
 
 
+#Bind the socket
 def socket_bind():
     global objSocket
     try:
         print("Listening on port " + str(intPort))
         objSocket.bind((strHost, intPort))
         objSocket.listen(20)
-        print ("Listening Finished")
+        # print ("Listening Finished")
     except socket.error() as strError:
         print("Error binding socket " + str(strError) + " Retrying...")
         socket_bind()
 
-
+#Accept the connections on the socket created.
 def socket_accept():
     global blnFirstRun, arrAddresses
     try:
@@ -59,20 +61,20 @@ def socket_accept():
         if address[0] not in updatedPeers:
             updatedPeers.append(address[0])
             
-        print (updatedPeers)
+        # print (updatedPeers)
         print("\n" + "Connection has been established: {0} ({1})".format(address[0], address[2]))
     except socket.error:
         print("Error accepting connections!")
 
 def main_menu():
-    print ("In main menu")
+    # print ("In main menu")
     # while True:
     strChoice = "--i"
     strChoice = str(strChoice)
     # refresh_connections()  # refresh connection list
 
     if strChoice == "--i":
-        print ("I am in main menu")
+        # print ("I am in main menu")
         send_commands()
     elif strChoice == "--x":
         close()
@@ -83,9 +85,9 @@ def main_menu():
 
 def close():
     global arrConnections, arrAddresses
-    print (" in close connections at beginning")
+    # print (" in close connections at beginning")
     if len(arrAddresses) == 0:  # if there are no computers connected
-        print("No any connection")
+        # print("No any connection")
         return
 
     for intCounter, conn in enumerate(arrConnections):
@@ -94,8 +96,8 @@ def close():
     del arrConnections; arrConnections = []
     del arrAddresses; arrAddresses = []
 
-    print(arrConnections )
-    print (" in close connections at the end")
+    # print(arrConnections )
+    # print (" in close connections at the end")
     global objSocket
     objSocket.close()
 
@@ -105,34 +107,27 @@ def refresh_connections():  # used to remove any lost connections
     for intCounter, conn in enumerate(arrConnections):
         try:
             conn.send(str.encode("test"))  # test to see if connection is active
-            print ("I am in refresh exception 1")
-            print(arrConnections)
-            print (" in referesh Connections try part")
+            # print ("I am in refresh exception 1")
+            # print(arrConnections)
+            # print (" in referesh Connections try part")
         except socket.error:
-            print ("I am in refresh exception 2")
+            # print ("I am in refresh exception 2")
             del arrAddresses[intCounter]
             del arrConnections[intCounter]
             conn.close()
-    print(arrConnections )
-    print ("In refresh Connections at the end")
-
-
-# def user_info():
-#     print("IP: " + arrInfo[0])
-#     print("PC Name: " + arrInfo[1])
-#     print("OS: " + arrInfo[2])
-#     print("User: " + arrInfo[3])
+    # print(arrConnections )
+    # print ("In refresh Connections at the end")
 
 
 def send_file():
-    print ("I am in send file")
+    # print ("I am in send file")
     strFile = "peers.txt"
     strOutputFile = "peers.txt"
     global arrConnections,arrAddresses
     for conn in arrConnections:
         if not os.path.isfile(strFile):
-            print (os.path)
-            print("Invalid File!")
+            # print (os.path)
+            # print("Invalid File!")
             return
         if strOutputFile == "":  # if the input is blank
             return
@@ -146,7 +141,7 @@ def send_file():
 
             for process in c.Win32_Process ():
                 if (process.Name == 'UI.exe'):
-                    print('its found')
+                    # print('its found')
                     result = process.Terminate()
                     if(i == 0):
 
@@ -159,14 +154,14 @@ def send_file():
         conn.send(str.encode(strOutputFile))
     print("Total bytes sent: " + str(os.path.getsize(strFile)))
     strClientResponse = decode_utf8(conn.recv(1024))
-    print (strClientResponse)
+    # print (strClientResponse)
     close()
 
 
 def send_commands():
     # show_help()
     try:
-        print ("I am in send Commands")
+        # print ("I am in send Commands")
         send_file()
     except socket.error as e:  # if there is a socket error
         print("Error, connection was lost! :" + "\n" + str(e))

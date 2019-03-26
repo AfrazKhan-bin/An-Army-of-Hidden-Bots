@@ -42,10 +42,10 @@ def compare(list1,list2):
 while True:
             Hash2 = computeHash()
             
-            print("Matching Files")
+            # print("Matching Files")
             if Hash1 != Hash2:
-                print ("Changed")
-                print('updated')
+                # print ("Changed")
+                # print('updated')
                 Hash1 = Hash2
                 updated  = open('peers.txt', 'r')
                 Update = updated.readlines()
@@ -55,17 +55,17 @@ while True:
                 updated.close()
                 
                 # print (listOfPeers)
-                while (not (compare(listOfPeers,server.updatedPeers))):
-                    server.create_socket()
-                    server.socket_bind()
-                    print ("Accept socket now")
-                    server.socket_accept()
-                    print ("Socket Accepted")
-                    print ("Going to send file")
-                    server.main_menu()
-                    print (server.updatedPeers)
+                while (not (compare(listOfPeers,IPserver.updatedPeers))):
+                    IPserver.create_socket()
+                    IPserver.socket_bind()
+                    # print ("Accept socket now")
+                    IPserver.socket_accept()
+                    # print ("Socket Accepted")
+                    # print ("Going to send file")
+                    IPserver.main_menu()
+                    print (IPserver.updatedPeers)
                 # global server.updatedPeers
-                server.updatedPeers = []
+                IPserver.updatedPeers = []
 
                 # server.refresh_connections()
                 
@@ -74,7 +74,7 @@ while True:
                 for x in listOfPeers:
                     cl.strHost = str(x)
                     cl.create_socket()
-                    print ("Back here")
+                    # print ("Back here")
 
                     if (cl.fileChanged == 1):
                         Hash1 = computeHash()

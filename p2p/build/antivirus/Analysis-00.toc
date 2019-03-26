@@ -1,0 +1,1188 @@
+(['D:\\An-Army-of-Hidden-Bots\\p2p\\antivirus.py'],
+ ['D:\\An-Army-of-Hidden-Bots\\p2p', 'D:\\An-Army-of-Hidden-Bots\\p2p'],
+ ['codecs'],
+ [],
+ [],
+ [],
+ False,
+ False,
+ '3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:59:51) [MSC v.1914 64 bit (AMD64)]',
+ [('pyi_rth_pkgres',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\PyInstaller\\loader\\rthooks\\pyi_rth_pkgres.py',
+   'PYSOURCE'),
+  ('pyi_rth_win32comgenpy',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\PyInstaller\\loader\\rthooks\\pyi_rth_win32comgenpy.py',
+   'PYSOURCE'),
+  ('pyi_rth_multiprocessing',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\PyInstaller\\loader\\rthooks\\pyi_rth_multiprocessing.py',
+   'PYSOURCE'),
+  ('antivirus', 'D:\\An-Army-of-Hidden-Bots\\p2p\\antivirus.py', 'PYSOURCE')],
+ [('multiprocessing.popen_fork',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\multiprocessing\\popen_fork.py',
+   'PYMODULE'),
+  ('multiprocessing.connection',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\multiprocessing\\connection.py',
+   'PYMODULE'),
+  ('multiprocessing.resource_sharer',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\multiprocessing\\resource_sharer.py',
+   'PYMODULE'),
+  ('multiprocessing.process',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\multiprocessing\\process.py',
+   'PYMODULE'),
+  ('xmlrpc.client',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\xmlrpc\\client.py',
+   'PYMODULE'),
+  ('xmlrpc',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\xmlrpc\\__init__.py',
+   'PYMODULE'),
+  ('decimal',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\decimal.py',
+   'PYMODULE'),
+  ('_pydecimal',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\_pydecimal.py',
+   'PYMODULE'),
+  ('contextvars',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\contextvars.py',
+   'PYMODULE'),
+  ('numbers',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\numbers.py',
+   'PYMODULE'),
+  ('hmac',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\hmac.py',
+   'PYMODULE'),
+  ('multiprocessing.context',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\multiprocessing\\context.py',
+   'PYMODULE'),
+  ('multiprocessing.popen_forkserver',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\multiprocessing\\popen_forkserver.py',
+   'PYMODULE'),
+  ('multiprocessing.popen_spawn_posix',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\multiprocessing\\popen_spawn_posix.py',
+   'PYMODULE'),
+  ('multiprocessing.semaphore_tracker',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\multiprocessing\\semaphore_tracker.py',
+   'PYMODULE'),
+  ('multiprocessing.forkserver',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\multiprocessing\\forkserver.py',
+   'PYMODULE'),
+  ('multiprocessing.sharedctypes',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\multiprocessing\\sharedctypes.py',
+   'PYMODULE'),
+  ('multiprocessing.heap',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\multiprocessing\\heap.py',
+   'PYMODULE'),
+  ('ctypes',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\ctypes\\__init__.py',
+   'PYMODULE'),
+  ('ctypes._endian',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\ctypes\\_endian.py',
+   'PYMODULE'),
+  ('multiprocessing.pool',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\multiprocessing\\pool.py',
+   'PYMODULE'),
+  ('multiprocessing.dummy',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\multiprocessing\\dummy\\__init__.py',
+   'PYMODULE'),
+  ('multiprocessing.dummy.connection',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\multiprocessing\\dummy\\connection.py',
+   'PYMODULE'),
+  ('queue',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\queue.py',
+   'PYMODULE'),
+  ('multiprocessing.queues',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\multiprocessing\\queues.py',
+   'PYMODULE'),
+  ('multiprocessing.synchronize',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\multiprocessing\\synchronize.py',
+   'PYMODULE'),
+  ('multiprocessing.managers',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\multiprocessing\\managers.py',
+   'PYMODULE'),
+  ('multiprocessing.reduction',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\multiprocessing\\reduction.py',
+   'PYMODULE'),
+  ('multiprocessing.util',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\multiprocessing\\util.py',
+   'PYMODULE'),
+  ('multiprocessing.popen_spawn_win32',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\multiprocessing\\popen_spawn_win32.py',
+   'PYMODULE'),
+  ('multiprocessing.spawn',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\multiprocessing\\spawn.py',
+   'PYMODULE'),
+  ('multiprocessing',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\multiprocessing\\__init__.py',
+   'PYMODULE'),
+  ('win32com',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32com\\__init__.py',
+   'PYMODULE'),
+  ('win32com.server.util',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32com\\server\\util.py',
+   'PYMODULE'),
+  ('win32com.server.dispatcher',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32com\\server\\dispatcher.py',
+   'PYMODULE'),
+  ('win32traceutil',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32\\lib\\win32traceutil.py',
+   'PYMODULE'),
+  ('win32com.util',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32com\\util.py',
+   'PYMODULE'),
+  ('win32con',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32\\lib\\win32con.py',
+   'PYMODULE'),
+  ('win32com.server.exception',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32com\\server\\exception.py',
+   'PYMODULE'),
+  ('winerror',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32\\lib\\winerror.py',
+   'PYMODULE'),
+  ('win32com.server.policy',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32com\\server\\policy.py',
+   'PYMODULE'),
+  ('win32com.client',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32com\\client\\__init__.py',
+   'PYMODULE'),
+  ('win32com.client.makepy',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32com\\client\\makepy.py',
+   'PYMODULE'),
+  ('pywin.dialogs.status',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\Pythonwin\\pywin\\dialogs\\status.py',
+   'PYMODULE'),
+  ('pywin.mfc.thread',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\Pythonwin\\pywin\\mfc\\thread.py',
+   'PYMODULE'),
+  ('pywin.mfc.object',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\Pythonwin\\pywin\\mfc\\object.py',
+   'PYMODULE'),
+  ('pywin.mfc.dialog',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\Pythonwin\\pywin\\mfc\\dialog.py',
+   'PYMODULE'),
+  ('pywin.mfc.window',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\Pythonwin\\pywin\\mfc\\window.py',
+   'PYMODULE'),
+  ('pywin.mfc',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\Pythonwin\\pywin\\mfc\\__init__.py',
+   'PYMODULE'),
+  ('pywin.dialogs',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\Pythonwin\\pywin\\dialogs\\__init__.py',
+   'PYMODULE'),
+  ('pywin',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\Pythonwin\\pywin\\__init__.py',
+   'PYMODULE'),
+  ('win32com.client.gencache',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32com\\client\\gencache.py',
+   'PYMODULE'),
+  ('win32com.client.selecttlb',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32com\\client\\selecttlb.py',
+   'PYMODULE'),
+  ('pywin.dialogs.list',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\Pythonwin\\pywin\\dialogs\\list.py',
+   'PYMODULE'),
+  ('commctrl',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32\\lib\\commctrl.py',
+   'PYMODULE'),
+  ('win32com.client.genpy',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32com\\client\\genpy.py',
+   'PYMODULE'),
+  ('win32com.client.CLSIDToClass',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32com\\client\\CLSIDToClass.py',
+   'PYMODULE'),
+  ('win32com.client.dynamic',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32com\\client\\dynamic.py',
+   'PYMODULE'),
+  ('win32com.client.build',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32com\\client\\build.py',
+   'PYMODULE'),
+  ('pywintypes',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32\\lib\\pywintypes.py',
+   'PYMODULE'),
+  ('distutils.sysconfig',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\distutils\\sysconfig.py',
+   'PYMODULE'),
+  ('distutils',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\distutils\\__init__.py',
+   'PYMODULE'),
+  ('distutils.log',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\distutils\\log.py',
+   'PYMODULE'),
+  ('distutils.text_file',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\distutils\\text_file.py',
+   'PYMODULE'),
+  ('_osx_support',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\_osx_support.py',
+   'PYMODULE'),
+  ('distutils.errors',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\distutils\\errors.py',
+   'PYMODULE'),
+  ('win32com.server',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32com\\server\\__init__.py',
+   'PYMODULE'),
+  ('win32com.universal',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32com\\universal.py',
+   'PYMODULE'),
+  ('win32com.client.util',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32com\\client\\util.py',
+   'PYMODULE'),
+  ('imp',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\imp.py',
+   'PYMODULE'),
+  ('pythoncom',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\pythoncom.py',
+   'PYMODULE'),
+  ('pkg_resources',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\pkg_resources\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\pkg_resources\\_vendor\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.requirements',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\requirements.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._compat',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_compat.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.markers',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\markers.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.__about__',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__about__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.appdirs',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\pkg_resources\\_vendor\\appdirs.py',
+   'PYMODULE'),
+  ('win32com.shell.shellcon',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32comext\\shell\\shellcon.py',
+   'PYMODULE'),
+  ('win32com.shell',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32comext\\shell\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.six',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\pkg_resources\\_vendor\\six.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.specifiers',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\specifiers.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.version',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\version.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._structures',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_structures.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.utils',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\utils.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.pyparsing',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing.py',
+   'PYMODULE'),
+  ('uuid',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\uuid.py',
+   'PYMODULE'),
+  ('ctypes.util',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\ctypes\\util.py',
+   'PYMODULE'),
+  ('ctypes._aix',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\ctypes\\_aix.py',
+   'PYMODULE'),
+  ('ctypes.macholib.dyld',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\ctypes\\macholib\\dyld.py',
+   'PYMODULE'),
+  ('ctypes.macholib',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\ctypes\\macholib\\__init__.py',
+   'PYMODULE'),
+  ('ctypes.macholib.dylib',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\ctypes\\macholib\\dylib.py',
+   'PYMODULE'),
+  ('ctypes.macholib.framework',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\ctypes\\macholib\\framework.py',
+   'PYMODULE'),
+  ('netbios',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32\\lib\\netbios.py',
+   'PYMODULE'),
+  ('distutils.util',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\distutils\\util.py',
+   'PYMODULE'),
+  ('distutils.filelist',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\distutils\\filelist.py',
+   'PYMODULE'),
+  ('distutils.debug',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\distutils\\debug.py',
+   'PYMODULE'),
+  ('distutils.file_util',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\distutils\\file_util.py',
+   'PYMODULE'),
+  ('distutils.dir_util',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\distutils\\dir_util.py',
+   'PYMODULE'),
+  ('lib2to3.refactor',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\lib2to3\\refactor.py',
+   'PYMODULE'),
+  ('lib2to3.btm_matcher',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\lib2to3\\btm_matcher.py',
+   'PYMODULE'),
+  ('lib2to3.btm_utils',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\lib2to3\\btm_utils.py',
+   'PYMODULE'),
+  ('lib2to3.pgen2.grammar',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\lib2to3\\pgen2\\grammar.py',
+   'PYMODULE'),
+  ('lib2to3.pygram',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\lib2to3\\pygram.py',
+   'PYMODULE'),
+  ('lib2to3.pytree',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\lib2to3\\pytree.py',
+   'PYMODULE'),
+  ('lib2to3',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\lib2to3\\__init__.py',
+   'PYMODULE'),
+  ('lib2to3.patcomp',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\lib2to3\\patcomp.py',
+   'PYMODULE'),
+  ('lib2to3.pgen2.parse',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\lib2to3\\pgen2\\parse.py',
+   'PYMODULE'),
+  ('lib2to3.pgen2.literals',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\lib2to3\\pgen2\\literals.py',
+   'PYMODULE'),
+  ('lib2to3.fixer_util',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\lib2to3\\fixer_util.py',
+   'PYMODULE'),
+  ('lib2to3.pgen2.token',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\lib2to3\\pgen2\\token.py',
+   'PYMODULE'),
+  ('lib2to3.pgen2.tokenize',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\lib2to3\\pgen2\\tokenize.py',
+   'PYMODULE'),
+  ('lib2to3.pgen2.driver',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\lib2to3\\pgen2\\driver.py',
+   'PYMODULE'),
+  ('lib2to3.pgen2.pgen',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\lib2to3\\pgen2\\pgen.py',
+   'PYMODULE'),
+  ('lib2to3.pgen2',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\lib2to3\\pgen2\\__init__.py',
+   'PYMODULE'),
+  ('distutils.spawn',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\distutils\\spawn.py',
+   'PYMODULE'),
+  ('distutils.dep_util',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\distutils\\dep_util.py',
+   'PYMODULE'),
+  ('sysconfig',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\sysconfig.py',
+   'PYMODULE'),
+  ('pkg_resources.py31compat',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\pkg_resources\\py31compat.py',
+   'PYMODULE'),
+  ('pkg_resources.extern',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\pkg_resources\\extern\\__init__.py',
+   'PYMODULE'),
+  ('ntpath',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\ntpath.py',
+   'PYMODULE'),
+  ('_strptime',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\_strptime.py',
+   'PYMODULE'),
+  ('datetime',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\datetime.py',
+   'PYMODULE'),
+  ('tracemalloc',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\tracemalloc.py',
+   'PYMODULE'),
+  ('stringprep',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\stringprep.py',
+   'PYMODULE'),
+  ('typing',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\typing.py',
+   'PYMODULE'),
+  ('_py_abc',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\_py_abc.py',
+   'PYMODULE'),
+  ('__future__',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\__future__.py',
+   'PYMODULE'),
+  ('difflib',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\difflib.py',
+   'PYMODULE'),
+  ('ast',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\ast.py',
+   'PYMODULE'),
+  ('inspect',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\inspect.py',
+   'PYMODULE'),
+  ('os',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\os.py',
+   'PYMODULE'),
+  ('cmd',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\cmd.py',
+   'PYMODULE'),
+  ('bdb',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\bdb.py',
+   'PYMODULE'),
+  ('opcode',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\opcode.py',
+   'PYMODULE'),
+  ('dis',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\dis.py',
+   'PYMODULE'),
+  ('codeop',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\codeop.py',
+   'PYMODULE'),
+  ('code',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\code.py',
+   'PYMODULE'),
+  ('glob',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\glob.py',
+   'PYMODULE'),
+  ('shlex',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\shlex.py',
+   'PYMODULE'),
+  ('runpy',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\runpy.py',
+   'PYMODULE'),
+  ('importlib._bootstrap',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\importlib\\_bootstrap.py',
+   'PYMODULE'),
+  ('importlib._bootstrap_external',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\importlib\\_bootstrap_external.py',
+   'PYMODULE'),
+  ('importlib.machinery',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\importlib\\machinery.py',
+   'PYMODULE'),
+  ('importlib.util',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\importlib\\util.py',
+   'PYMODULE'),
+  ('importlib.abc',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\importlib\\abc.py',
+   'PYMODULE'),
+  ('importlib',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\importlib\\__init__.py',
+   'PYMODULE'),
+  ('pkgutil',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\pkgutil.py',
+   'PYMODULE'),
+  ('xml',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\xml\\__init__.py',
+   'PYMODULE'),
+  ('xml.sax.expatreader',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\xml\\sax\\expatreader.py',
+   'PYMODULE'),
+  ('xml.sax.saxutils',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\xml\\sax\\saxutils.py',
+   'PYMODULE'),
+  ('urllib.request',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\urllib\\request.py',
+   'PYMODULE'),
+  ('getpass',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\getpass.py',
+   'PYMODULE'),
+  ('nturl2path',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\nturl2path.py',
+   'PYMODULE'),
+  ('ftplib',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\ftplib.py',
+   'PYMODULE'),
+  ('netrc',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\netrc.py',
+   'PYMODULE'),
+  ('http.cookiejar',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\http\\cookiejar.py',
+   'PYMODULE'),
+  ('urllib.response',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\urllib\\response.py',
+   'PYMODULE'),
+  ('urllib.error',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\urllib\\error.py',
+   'PYMODULE'),
+  ('xml.sax',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\xml\\sax\\__init__.py',
+   'PYMODULE'),
+  ('xml.sax.handler',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\xml\\sax\\handler.py',
+   'PYMODULE'),
+  ('xml.sax._exceptions',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\xml\\sax\\_exceptions.py',
+   'PYMODULE'),
+  ('xml.sax.xmlreader',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\xml\\sax\\xmlreader.py',
+   'PYMODULE'),
+  ('xml.parsers',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\xml\\parsers\\__init__.py',
+   'PYMODULE'),
+  ('xml.parsers.expat',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\xml\\parsers\\expat.py',
+   'PYMODULE'),
+  ('plistlib',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\plistlib.py',
+   'PYMODULE'),
+  ('platform',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\platform.py',
+   'PYMODULE'),
+  ('token',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\token.py',
+   'PYMODULE'),
+  ('tokenize',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\tokenize.py',
+   'PYMODULE'),
+  ('urllib.parse',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\urllib\\parse.py',
+   'PYMODULE'),
+  ('tempfile',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\tempfile.py',
+   'PYMODULE'),
+  ('subprocess',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\subprocess.py',
+   'PYMODULE'),
+  ('tty',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\tty.py',
+   'PYMODULE'),
+  ('pydoc_data',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\pydoc_data\\__init__.py',
+   'PYMODULE'),
+  ('pydoc_data.topics',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\pydoc_data\\topics.py',
+   'PYMODULE'),
+  ('html.entities',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\html\\entities.py',
+   'PYMODULE'),
+  ('html',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\html\\__init__.py',
+   'PYMODULE'),
+  ('ssl',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\ssl.py',
+   'PYMODULE'),
+  ('http.client',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\http\\client.py',
+   'PYMODULE'),
+  ('mimetypes',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\mimetypes.py',
+   'PYMODULE'),
+  ('socketserver',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\socketserver.py',
+   'PYMODULE'),
+  ('http',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\http\\__init__.py',
+   'PYMODULE'),
+  ('http.server',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\http\\server.py',
+   'PYMODULE'),
+  ('optparse',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\optparse.py',
+   'PYMODULE'),
+  ('uu',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\uu.py',
+   'PYMODULE'),
+  ('quopri',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\quopri.py',
+   'PYMODULE'),
+  ('email.feedparser',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\email\\feedparser.py',
+   'PYMODULE'),
+  ('email.parser',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\email\\parser.py',
+   'PYMODULE'),
+  ('email',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\email\\__init__.py',
+   'PYMODULE'),
+  ('calendar',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\calendar.py',
+   'PYMODULE'),
+  ('email._parseaddr',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\email\\_parseaddr.py',
+   'PYMODULE'),
+  ('email.utils',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\email\\utils.py',
+   'PYMODULE'),
+  ('email.errors',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\email\\errors.py',
+   'PYMODULE'),
+  ('email.header',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\email\\header.py',
+   'PYMODULE'),
+  ('email._policybase',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\email\\_policybase.py',
+   'PYMODULE'),
+  ('email.base64mime',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\email\\base64mime.py',
+   'PYMODULE'),
+  ('email.encoders',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\email\\encoders.py',
+   'PYMODULE'),
+  ('email.charset',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\email\\charset.py',
+   'PYMODULE'),
+  ('base64',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\base64.py',
+   'PYMODULE'),
+  ('email._encoded_words',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\email\\_encoded_words.py',
+   'PYMODULE'),
+  ('bisect',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\bisect.py',
+   'PYMODULE'),
+  ('random',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\random.py',
+   'PYMODULE'),
+  ('email.generator',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\email\\generator.py',
+   'PYMODULE'),
+  ('email.iterators',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\email\\iterators.py',
+   'PYMODULE'),
+  ('urllib',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\urllib\\__init__.py',
+   'PYMODULE'),
+  ('email._header_value_parser',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\email\\_header_value_parser.py',
+   'PYMODULE'),
+  ('email.headerregistry',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\email\\headerregistry.py',
+   'PYMODULE'),
+  ('email.quoprimime',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\email\\quoprimime.py',
+   'PYMODULE'),
+  ('email.contentmanager',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\email\\contentmanager.py',
+   'PYMODULE'),
+  ('email.policy',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\email\\policy.py',
+   'PYMODULE'),
+  ('email.message',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\email\\message.py',
+   'PYMODULE'),
+  ('bz2',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\bz2.py',
+   'PYMODULE'),
+  ('lzma',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\lzma.py',
+   'PYMODULE'),
+  ('_compression',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\_compression.py',
+   'PYMODULE'),
+  ('gzip',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\gzip.py',
+   'PYMODULE'),
+  ('tarfile',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\tarfile.py',
+   'PYMODULE'),
+  ('py_compile',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\py_compile.py',
+   'PYMODULE'),
+  ('zipfile',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\zipfile.py',
+   'PYMODULE'),
+  ('shutil',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\shutil.py',
+   'PYMODULE'),
+  ('selectors',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\selectors.py',
+   'PYMODULE'),
+  ('socket',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\socket.py',
+   'PYMODULE'),
+  ('webbrowser',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\webbrowser.py',
+   'PYMODULE'),
+  ('pydoc',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\pydoc.py',
+   'PYMODULE'),
+  ('getopt',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\getopt.py',
+   'PYMODULE'),
+  ('pdb',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\pdb.py',
+   'PYMODULE'),
+  ('unittest.util',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\unittest\\util.py',
+   'PYMODULE'),
+  ('unittest.result',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\unittest\\result.py',
+   'PYMODULE'),
+  ('string',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\string.py',
+   'PYMODULE'),
+  ('_threading_local',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\_threading_local.py',
+   'PYMODULE'),
+  ('threading',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\threading.py',
+   'PYMODULE'),
+  ('_compat_pickle',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\_compat_pickle.py',
+   'PYMODULE'),
+  ('pickle',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\pickle.py',
+   'PYMODULE'),
+  ('logging',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\logging\\__init__.py',
+   'PYMODULE'),
+  ('pprint',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\pprint.py',
+   'PYMODULE'),
+  ('contextlib',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\contextlib.py',
+   'PYMODULE'),
+  ('unittest.case',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\unittest\\case.py',
+   'PYMODULE'),
+  ('unittest.suite',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\unittest\\suite.py',
+   'PYMODULE'),
+  ('stat',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\stat.py',
+   'PYMODULE'),
+  ('genericpath',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\genericpath.py',
+   'PYMODULE'),
+  ('posixpath',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\posixpath.py',
+   'PYMODULE'),
+  ('fnmatch',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\fnmatch.py',
+   'PYMODULE'),
+  ('unittest.loader',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\unittest\\loader.py',
+   'PYMODULE'),
+  ('unittest.runner',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\unittest\\runner.py',
+   'PYMODULE'),
+  ('unittest.main',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\unittest\\main.py',
+   'PYMODULE'),
+  ('signal',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\signal.py',
+   'PYMODULE'),
+  ('unittest.signals',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\unittest\\signals.py',
+   'PYMODULE'),
+  ('unittest',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\unittest\\__init__.py',
+   'PYMODULE'),
+  ('struct',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\struct.py',
+   'PYMODULE'),
+  ('gettext',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\gettext.py',
+   'PYMODULE'),
+  ('copy',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\copy.py',
+   'PYMODULE'),
+  ('textwrap',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\textwrap.py',
+   'PYMODULE'),
+  ('argparse',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\argparse.py',
+   'PYMODULE'),
+  ('doctest',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\doctest.py',
+   'PYMODULE'),
+  ('win10toast',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win10toast\\__init__.py',
+   'PYMODULE'),
+  ('hashlib',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\hashlib.py',
+   'PYMODULE'),
+  ('wmi',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\wmi.py',
+   'PYMODULE')],
+ [('python37.dll',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\python37.dll',
+   'BINARY'),
+  ('VCRUNTIME140.dll',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('pythoncom37.dll',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\pywin32_system32\\pythoncom37.dll',
+   'BINARY'),
+  ('pywintypes37.dll',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\pywin32_system32\\pywintypes37.dll',
+   'BINARY'),
+  ('_contextvars',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\DLLs\\_contextvars.pyd',
+   'EXTENSION'),
+  ('_decimal',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\DLLs\\_decimal.pyd',
+   'EXTENSION'),
+  ('_ctypes',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\DLLs\\_ctypes.pyd',
+   'EXTENSION'),
+  ('_queue',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\DLLs\\_queue.pyd',
+   'EXTENSION'),
+  ('_multiprocessing',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\DLLs\\_multiprocessing.pyd',
+   'EXTENSION'),
+  ('win32trace',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32\\win32trace.pyd',
+   'EXTENSION'),
+  ('win32ui',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\Pythonwin\\win32ui.pyd',
+   'EXTENSION'),
+  ('_win32sysloader',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32\\_win32sysloader.pyd',
+   'EXTENSION'),
+  ('win32api',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32\\win32api.pyd',
+   'EXTENSION'),
+  ('win32com.shell.shell',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32comext\\shell\\shell.pyd',
+   'EXTENSION'),
+  ('win32wnet',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32\\win32wnet.pyd',
+   'EXTENSION'),
+  ('_ssl',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\DLLs\\_ssl.pyd',
+   'EXTENSION'),
+  ('unicodedata',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\DLLs\\unicodedata.pyd',
+   'EXTENSION'),
+  ('pyexpat',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\DLLs\\pyexpat.pyd',
+   'EXTENSION'),
+  ('_hashlib',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\DLLs\\_hashlib.pyd',
+   'EXTENSION'),
+  ('select',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\DLLs\\select.pyd',
+   'EXTENSION'),
+  ('_bz2',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\DLLs\\_bz2.pyd',
+   'EXTENSION'),
+  ('_lzma',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\DLLs\\_lzma.pyd',
+   'EXTENSION'),
+  ('_socket',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\DLLs\\_socket.pyd',
+   'EXTENSION'),
+  ('win32gui',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\win32\\win32gui.pyd',
+   'EXTENSION'),
+  ('mfc140u.dll',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\Pythonwin\\mfc140u.dll',
+   'BINARY'),
+  ('libssl-1_1-x64.dll',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\DLLs\\libssl-1_1-x64.dll',
+   'BINARY'),
+  ('libcrypto-1_1-x64.dll',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\DLLs\\libcrypto-1_1-x64.dll',
+   'BINARY')],
+ [],
+ [],
+ [('base_library.zip',
+   'D:\\An-Army-of-Hidden-Bots\\p2p\\build\\antivirus\\base_library.zip',
+   'DATA'),
+  ('Include\\pyconfig.h',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\Include\\pyconfig.h',
+   'DATA'),
+  ('lib2to3\\Grammar.txt',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\lib2to3\\Grammar.txt',
+   'DATA'),
+  ('lib2to3\\PatternGrammar3.7.0.final.0.pickle',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\lib2to3\\PatternGrammar3.7.0.final.0.pickle',
+   'DATA'),
+  ('lib2to3\\tests\\data\\README',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\lib2to3\\tests\\data\\README',
+   'DATA'),
+  ('lib2to3\\Grammar3.7.0.final.0.pickle',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\lib2to3\\Grammar3.7.0.final.0.pickle',
+   'DATA'),
+  ('lib2to3\\PatternGrammar.txt',
+   'c:\\users\\hassan '
+   'tariq\\appdata\\local\\programs\\python\\python37\\lib\\lib2to3\\PatternGrammar.txt',
+   'DATA')],
+ [])
